@@ -57,8 +57,8 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Assets\Scenes\Player.cs" />
-    <Compile Include="Assets\Player_controller.cs" />
     <Compile Include="Assets\Bullet.cs" />
+    <Compile Include="Assets\Player_controller.cs" />
   </ItemGroup>
   <ItemGroup>
     <Reference Include="UnityEngine">
