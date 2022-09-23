@@ -7,7 +7,7 @@ public class Rotator : MonoBehaviour
     public float rotationSpeedMax = 90;
     public float rotationSpeedMin = -90;
     public float rotationSpeed;
-    public float jugi = 20;
+    public float jugi = 50;
     void Start()
     {
         rotationSpeed = Random.Range(rotationSpeedMax, rotationSpeedMin);
@@ -15,11 +15,11 @@ public class Rotator : MonoBehaviour
     void Update()
     {
         jugi -= 1;
-        transform.Rotate(0f, rotationSpeed * Time.deltaTime, 0f);
+        transform.Rotate(0f, rotationSpeed * Time.deltaTime * 2, 0f );
         if (jugi <= 0)
         {
             rotationSpeed = Random.Range(rotationSpeedMax, rotationSpeedMin);
-            jugi = 20;
+            jugi = 50;
         }
     }
 }
