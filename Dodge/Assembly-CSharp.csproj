@@ -56,12 +56,13 @@
     <Analyzer Include="C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\Common7\IDE\Extensions\Microsoft\Visual Studio Tools for Unity\Analyzers\Microsoft.Unity.Analyzers.dll" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Assets\My game\Player.cs" />
+    <Compile Include="Assets\02.Scripts\Player.cs" />
     <Compile Include="Assets\02.Scripts\BulletSpawner.cs" />
     <Compile Include="Assets\02.Scripts\Bullet.cs" />
     <Compile Include="Assets\02.Scripts\GameManager.cs" />
     <Compile Include="Assets\02.Scripts\Rotator.cs" />
     <Compile Include="Assets\02.Scripts\PlayerController.cs" />
+    <Compile Include="Assets\02.Scripts\Bullet2.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="Assets\TextMesh Pro\Shaders\TMPro.cginc" />

@@ -5,6 +5,7 @@ using UnityEngine;
 public class BulletSpawner : MonoBehaviour
 {
     public GameObject bulletPrefab;
+    public GameObject bullet2Prefab;
     public float spawnRateMin = 0.3f;
     public float spawnRateMax = 7f;
 
@@ -43,6 +44,10 @@ public class BulletSpawner : MonoBehaviour
             bullet.transform.LookAt(target);
             // 다음번 생성 간격을 spawnRateMin, spawnRateMax 사이에서 랜덤 지정
             spawnRate = Random.Range(spawnRateMin, spawnRateMax) / 3;
+            GameObject bullet2
+                = Instantiate(bullet2Prefab, transform.position, transform.rotation);
+            bullet2.transform.LookAt(target);
+            spawnRate = Random.Range(spawnRateMin*10, spawnRateMax);
         }
     }
 }

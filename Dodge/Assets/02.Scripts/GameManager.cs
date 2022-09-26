@@ -47,5 +47,18 @@ public class GameManager : MonoBehaviour
         isGameover = true;
         // 게임오버 텍스트 게임 오브젝트를 활성화
         gameoverText.SetActive(true);
+        // BestTime 키로 저장된 이전까지의 최고 기록 자겨오기
+        float bestTime = PlayerPrefs.GetFloat("BestTime");
+        // 이전까지의 최고 기록보다 현재 생존 시간이 더 크다면
+        if (surviveTime > bestTime)
+        {
+            //최고 기록 값을 현재 생존 시간 값으로 변경
+            bestTime = surviveTime;
+            // 변경된 최고 기록을 BestTime 키로 저장
+            PlayerPrefs.SetFloat("BestTime", bestTime);
+        }
+
+        //최고 기록을 recordText 텍스트 컴포넌트를 이용해 표시
+        recordText.text = "Best Time:" + (int)bestTime;
     }
 }
