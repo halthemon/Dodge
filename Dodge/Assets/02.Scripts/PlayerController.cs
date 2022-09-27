@@ -21,8 +21,8 @@ public class PlayerController : MonoBehaviour
         float zInput = Input.GetAxis("Vertical");
 
         // 실제 이동 속도를 입력값과 이동 속력을 사용해 결정
-        float xSpeed = xInput * speed;
-        float zSpeed = zInput * speed;
+        float xSpeed = -xInput * speed * 5;
+        float zSpeed = -zInput * speed * 5;
 
         // Vector3 속도를 (xSpeed, 0, zSpeed)로 생성
         Vector3 newVelocity = new Vector3(xSpeed, 0f, zSpeed);
@@ -35,7 +35,7 @@ public class PlayerController : MonoBehaviour
 
         // 씬에 존재하는 GameManager 타입의 오브젝트를 찾아서 가져오기
         GameManager gameManager = FindObjectOfType<GameManager>();
-        // 가져온 GameManager 오브젝트의 EndGame() 메서드 시랳ㅇ
+        // 가져온 GameManager 오브젝트의 EndGame() 메서드 실행
         gameManager.EndGame();
     }
 }
